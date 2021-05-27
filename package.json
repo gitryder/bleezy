@@ -1,0 +1,21 @@
+{
+  "name": "bleezy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "bleezy": "app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bible-gateway-api": "^1.0.8",
+    "cheerio": "*",
+    "clipboardy": "^2.3.0",
+    "request": "^2.88.2"
+  }
+}
