@@ -45,6 +45,7 @@ request(url, (error, response, html) => {
         } else {
             console.log(`\nVerse => ${verse} -- ${clean_ref}`);
             clipboardy.writeSync(`${verse}\n${clean_ref}`);
+            console.log('\nVerse copied to your clipboard.');
         }
     }
 });
