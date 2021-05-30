@@ -13,9 +13,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bible-gateway-api": "^1.0.8",
     "cheerio": "*",
     "clipboardy": "^2.3.0",
+    "jquery": "^3.6.0",
+    "node-notifier": "^10.0.0",
     "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "electron": "^13.0.1"
   }
 }

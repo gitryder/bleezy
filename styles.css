@@ -1,0 +1,63 @@
+:root {
+    --background: #FFFFFF;
+    --primary: #356859;
+    --primaryLight: #37966F;
+    --secondary: #FD5523;
+}
+/*
+:root {
+    --background: #FFFBE6;
+    --primary: #356859;
+    --primaryLight: #37966F;
+    --secondary: #FD5523;
+}
+*/
+
+body {
+    background: var(--background);
+
+    position: absolute;
+    top: 30%;
+    left: 5%;
+}
+.text {
+    font-family: Raleway;
+    font-style: normal;
+    color: black;
+}
+
+.message {
+    display: none;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.title {
+    width: 859px;
+    height: 74px;
+
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 75px;
+
+    color: var(--primary);
+}
+
+.input {
+    width: 500px;
+    height: 60px;
+
+    background: var(--background);
+
+    border: 2px solid var(--secondary);
+    border-radius: 10px;
+
+    outline: none;
+
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--secondary);
+    
+    margin-top: -30px;
+    padding-left: 10px;
+}
