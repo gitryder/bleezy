@@ -10,6 +10,7 @@ app.whenReady().then(() => {
         }
       })
 
+    win.removeMenu()
     win.loadFile('index.html')
 })
 
