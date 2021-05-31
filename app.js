@@ -7,12 +7,12 @@ app.whenReady().then(() => {
         height: 600,
         webPreferences: {
             nodeIntegration: true,
-            contextIsolation: false,
-            icon: __dirname + '/icon.png'
+            contextIsolation: false
         }
       })
 
     win.removeMenu()
+    win.maximize()
     win.loadFile('index.html')
 })
 

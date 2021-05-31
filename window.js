@@ -1,5 +1,5 @@
 $(() => {
-    $("#search-query-input").keyup(function(event) {
+    $("#search-input").keyup(function(event) {
         if (event.key == "Enter") {
             handleEvent(this.value)
         }
@@ -12,6 +12,8 @@ function handleEvent(inputString) {
     const cheerio = require('cheerio');
     const clipboardy = require('clipboardy');
     const notifier = require('node-notifier');
+
+    let messageDialog = $('#message')
 
     let trimmedInputString = inputString.trim()
 
@@ -62,13 +64,14 @@ function handleEvent(inputString) {
                 let clean_ref = ref.substring(0, ref.lastIndexOf(' '));
 
                 console.log(`Verse => ${verse} -- ${clean_ref}`);
-                hideLoading()
 
                 clipboardy.writeSync(`${verse}\n${clean_ref}`);
                 notifier.notify({
                     title: 'Bleezy',
                     message: `${clean_ref} was copied to the clipboard`
                 });  
+
+                hideLoading()
             }
         }
     });
@@ -77,11 +80,9 @@ function handleEvent(inputString) {
 }
 
 function showLoading() {
-    $('.container-1').hide()
-    $('.container-2').css("display", "flex");
+    $('#message').show()
 }
 
 function hideLoading() {
-    $('.container-1').show()
-    $('.container-2').hide()
+    $('#message').hide()
 }
