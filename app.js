@@ -1,4 +1,5 @@
-const { app, BrowserWindow, globalShortcut } = require('electron')
+const { app, BrowserWindow } = require('electron')
+const path = require('path')
 
 app.whenReady().then(() => {
     const win = new BrowserWindow({
@@ -6,7 +7,8 @@ app.whenReady().then(() => {
         height: 600,
         webPreferences: {
             nodeIntegration: true,
-            contextIsolation: false
+            contextIsolation: false,
+            icon: __dirname + '/icon.png'
         }
       })
 
