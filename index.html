@@ -14,9 +14,15 @@
     <script>window.$ = window.jQuery = require('jquery');</script>
     <script src="window.js" charset="utf-8"></script> 
 </head>
-<body>
-    <h1 class="text title">Search Bible Verses</h1>
-    <input class="text input" spellcheck="false" type="text" id="search-query-input" placeholder="eg. neh 8:11 nlt">
-    <h3 class="text message"></h3>  
-</body>
+    <body>
+        <div class="container-1">
+            <h1 class="text title">Search Bible Verses</h1>
+            <input class="text input" spellcheck="false" type="text" id="search-query-input" placeholder="eg. neh 8:11 nlt">
+            <h3 class="text message"></h3> 
+        </div>
+        <div class="container-2">
+            <h1 class="loading-text" id="loading-box">Loading your verse...</h1>
+        </div>
+    </body>
+    
 </html>

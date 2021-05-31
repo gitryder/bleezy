@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, globalShortcut } = require('electron')
 
 app.whenReady().then(() => {
     const win = new BrowserWindow({
@@ -8,8 +8,8 @@ app.whenReady().then(() => {
             nodeIntegration: true,
             contextIsolation: false
         }
-      });
-    
+      })
+
     win.loadFile('index.html')
 })
 
