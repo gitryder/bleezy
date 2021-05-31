@@ -1,3 +1,14 @@
+@font-face {
+    font-family: sfui;
+    src: url("sfui.otf") format("opentype");
+}
+
+
+.title {
+    font-family: sfui;
+    font-weight: bold;
+}
+
 .input {
       width: 500px;
       height: 60px;
@@ -7,13 +18,17 @@
       border: 2px solid #25D58A;
       border-radius: 8px;
 
+      font-family: sfui;
       font-size: medium;
       font-size: 30px;
 
       padding-left: 15px;
       margin-bottom: 15px;
+      color: #25D58A;
 }
 
 #message {
+    font-family: sfui;
+    font-size: 20px;
     display: none;
 }
