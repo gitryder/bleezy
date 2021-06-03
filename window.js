@@ -53,25 +53,25 @@ function handleEvent(inputString) {
         if (!error && response.statusCode == 200) {
             const $ = cheerio.load(html);
             let verse = $('meta[property="og:description"]').attr('content');
-            let ref = $('meta[name="twitter:title"]').attr('content');
+            let full_ref = $('meta[name="twitter:title"]').attr('content');
             
             console.log(`\nURL => ${url}`);
 
-            if (typeof verse === 'undefined' || typeof ref === 'undefined') {
+            if (typeof verse === 'undefined' || typeof full_ref === 'undefined') {
                 hideLoading()
                 console.log('Please check the book and reference you specified.');
             } else {
-                let clean_ref = ref.substring(0, ref.lastIndexOf(' '));
+                let ref = full_ref.substring(0, full_ref.lastIndexOf(' ')) + " " + b_translation.toUpperCase();
 
-                console.log(`Verse => ${verse} -- ${clean_ref}`);
+                console.log(`Verse => ${verse} -- ${ref}`);
 
-                clipboardy.writeSync(`${verse}\n${clean_ref}`);
+                clipboardy.writeSync(`${verse}\n${ref}`);
                 notifier.notify({
                     title: 'Bleezy',
-                    message: `${clean_ref} was copied to the clipboard`
+                    message: `${ref} was copied to the clipboard`
                 });  
 
-                hideLoading()
+                displayVerse(verse, ref)
             }
         }
     });
@@ -80,9 +80,17 @@ function handleEvent(inputString) {
 }
 
 function showLoading() {
+    $('#message').text("Loading verse...")
+    $('#ref').hide()
     $('#message').show()
 }
 
 function hideLoading() {
     $('#message').hide()
+}
+
+function displayVerse(verse, clean_ref) {
+    $('#message').text(verse)
+    $('#ref').text(clean_ref)
+    $('#ref').show()
 }

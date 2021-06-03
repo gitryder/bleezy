@@ -1,34 +1,45 @@
-@font-face {
-    font-family: sfui;
-    src: url("sfui.otf") format("opentype");
+.col-sm-9 {
+    background-color: #181a1b;
 }
 
-
 .title {
-    font-family: sfui;
-    font-weight: bold;
+    color: whitesmoke;
+    font-family: 'Barlow';
+    font-weight: 700;
 }
 
 .input {
-      width: 500px;
-      height: 60px;
+    width: 500px;
+    height: 60px;
 
-      outline: none;
+    outline: none;
 
-      border: 2px solid #25D58A;
-      border-radius: 8px;
+    border: 2px solid #25d58a;
+    border-radius: 8px;
 
-      font-family: sfui;
-      font-size: medium;
-      font-size: 30px;
+    font-family: 'Barlow';
+    font-size: 400;
+    font-size: 30px;
 
-      padding-left: 15px;
-      margin-bottom: 15px;
-      color: #25D58A;
+    padding-left: 15px;
+    margin-bottom: 15px;
+    color: #25d58a;
+
+    background: #181a1b;
 }
 
-#message {
-    font-family: sfui;
-    font-size: 20px;
+.message {
     display: none;
+    
+    font-family: 'Barlow';
+    font-size: 24px;
+    font-weight: 400;
+    display: block;
+
+    color: #949494;
+}
+
+#ref {
+    margin-top: -17px;
+    font-weight: 600;
 }
