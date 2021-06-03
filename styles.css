@@ -1,10 +1,14 @@
+:root {
+    --font: 'Barlow';
+}
+
 .col-sm-9 {
     background-color: #181a1b;
 }
 
 .title {
     color: whitesmoke;
-    font-family: 'Barlow';
+    font-family: var(--font);
     font-weight: 700;
 }
 
@@ -17,7 +21,7 @@
     border: 2px solid #25d58a;
     border-radius: 8px;
 
-    font-family: 'Barlow';
+    font-family: var(--font);
     font-size: 400;
     font-size: 30px;
 
@@ -31,7 +35,7 @@
 .message {
     display: none;
     
-    font-family: 'Barlow';
+    font-family: var(--font);
     font-size: 24px;
     font-weight: 400;
     display: block;
