@@ -3,7 +3,7 @@ const path = require('path')
 
 app.whenReady().then(() => {
     const win = new BrowserWindow({
-        width: 800,
+        width: 1080,
         height: 600,
         webPreferences: {
             nodeIntegration: true,
