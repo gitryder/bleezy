@@ -11,7 +11,6 @@ app.whenReady().then(() => {
         }
       })
 
-    win.maximize()
     win.loadFile('index.html')
 })
 
