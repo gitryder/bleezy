@@ -1,9 +1,16 @@
 :root {
     --font: 'Barlow';
+    --bg: #490b3d;
+    --accent-color: #bd1e51;
+    --input-text-color: #f1b814;
+    --message-color: #f1b814;
 }
 
+.col-sm-3 {
+    background-color: var(--accent-color);
+}
 .col-sm-9 {
-    background-color: #181a1b;
+    background-color: var(--bg);
 }
 
 .title {
@@ -13,12 +20,13 @@
 }
 
 .input {
-    width: 500px;
+    width: 75px;
     height: 60px;
 
+    display: inline;
     outline: none;
 
-    border: 2px solid #25d58a;
+    border: 2px solid var(--accent-color);
     border-radius: 8px;
 
     font-family: var(--font);
@@ -27,9 +35,28 @@
 
     padding-left: 15px;
     margin-bottom: 15px;
-    color: #25d58a;
+    margin-right: 5px;
+    color: var(--input-text-color);
 
-    background: #181a1b;
+    background: var(--bg);
+}
+
+#search-input {
+    width: 95px;
+
+}
+
+#chapter-input {
+    
+}
+
+#verse-input {
+    
+
+}
+
+#translation-input {
+    width: 85px;
 }
 
 .message {
@@ -40,7 +67,7 @@
     font-weight: 400;
     display: block;
 
-    color: #949494;
+    color: var(--message-color);
 }
 
 #ref {

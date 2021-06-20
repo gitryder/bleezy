@@ -1,7 +1,23 @@
 $(() => {
-    $("#search-input").keyup(function(event) {
+    $("#translation-input").keyup(function(event) {
         if (event.key == "Enter") {
             handleEvent(this.value)
+        } else if (event.keyCode == 8) {
+            if (!$(this).val()) {
+                $(this).prev().focus();
+            }
+        }
+    });
+
+    $('#search-input,#chapter-input,#verse-input').keyup(function(event) {
+        if (event.keyCode == 32 || event.keyCode == 13) {
+            if ($(this).val()) {
+                $(this).next().focus();
+            }
+        } else if (event.keyCode == 8) {
+            if (!$(this).val()) {
+                $(this).prev().focus();
+            }
         }
     });
 })

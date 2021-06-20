@@ -17,11 +17,15 @@
   <body>
     <div class="container-fluid">
       <div class="row justify-content-center">
-        <div class="col-sm-3" style="background: #25D58A; height: 100vh;"></div>
+        <div class="col-sm-3" style="height: 100vh;"></div>
         <div class="col-sm-9 d-flex flex-row" style="height: 100vh;">
               <div class="col m-5">
                     <h1 class="title display-4">Search Bible Verses</h1>
-                    <input class="input" id="search-input" spellcheck="false" text" placeholder="Eg. col 3.3 nlt">
+                    <input class="input" id="search-input" maxlength="5" spellcheck="false" type="text" placeholder="phile">
+                    <input class="input" id="chapter-input" maxlength="3" spellcheck="false" type="text" placeholder="150">
+                    <input class="input" id="verse-input" maxlength="3" spellcheck="false" type="text" placeholder="176">
+                    <input class="input" id="translation-input" maxlength="4" spellcheck="false" type="text" placeholder="nlt">
+
                     <p class="message" id="message"></p>
                     <p class="message" id="ref"></p>
               </div>
