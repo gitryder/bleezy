@@ -41,7 +41,7 @@
     background: var(--bg);
 }
 
-#search-input {
+#book-input {
     width: 95px;
 
 }
@@ -68,9 +68,11 @@
     display: block;
 
     color: var(--message-color);
+
+    margin-top: 10px;
 }
 
 #ref {
-    margin-top: -17px;
+    margin-top: 10px;
     font-weight: 600;
 }
