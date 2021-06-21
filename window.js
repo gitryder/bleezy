@@ -129,7 +129,7 @@ function fetchBibleVerse (bibleSearch) {
                 });  
 
                 displayVerse(verse, ref);
-                clearInputFields();
+                clearInputFieldsAndFocusFirstField();
             }
         }
     });
@@ -220,11 +220,13 @@ function showLoading() {
     $('#message').show()
 }
 
-function clearInputFields() {
-    bookNameInputField.text("");
-    chapterNumberInputField.text("");
-    verseNumberInputField.text("");
-    translationField.text("");
+function clearInputFieldsAndFocusFirstField() {
+    bookNameInputField.val("");
+    chapterNumberInputField.val("");
+    verseNumberInputField.val("");
+    translationField.val("");
+
+    bookNameInputField.focus();
 }
 
 function hideLoading() {
