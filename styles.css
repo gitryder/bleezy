@@ -76,7 +76,9 @@
 .dev {
     position: fixed;
     bottom: 0;
-    
+
+    font-family: var(--font);
+
     color: rgba(244, 244, 244, 0.521);
 }
 
