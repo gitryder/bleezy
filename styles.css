@@ -16,7 +16,8 @@
 .title {
     color: whitesmoke;
     font-family: var(--font);
-    font-weight: 700;
+    font-weight: 400;
+    font-size: 60px;
 }
 
 .input {
@@ -30,7 +31,7 @@
     border-radius: 8px;
 
     font-family: var(--font);
-    font-size: 400;
+    font-weight: 600;
     font-size: 30px;
 
     text-align: center;
@@ -69,7 +70,14 @@
 
     color: var(--message-color);
 
-    margin-top: 10px;
+    margin-top: 200px;
+}
+
+.dev {
+    position: fixed;
+    bottom: 0;
+    
+    color: rgba(244, 244, 244, 0.521);
 }
 
 #ref {
